@@ -17,27 +17,38 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
+            bool containsUpper = false;
+            bool containsLower = false;
+            bool containsNumber = false;
+
             throw new NotImplementedException();
+
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor == 0)
+            {
+                return divisor;
+            }
+            return dividend / divisor;
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            var last = nums[nums.Length - 1];
+            var first = nums[0];
+            return last - first;
         }
 
         public int[] GetOddsBelow100()
