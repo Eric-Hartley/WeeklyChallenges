@@ -20,23 +20,21 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return false;
+            }
             List<int> odds = new List<int>();
-
             foreach (var val in numbers)
             {
-                
                 if (val % 2 != 0)
                 {
                     odds.Add(val);
                 }
             }
-            if (odds.Sum() % 2 != 0)
-            {
-                return true;
-            }
-            
-            return false;
-            
+            var sum = odds.Sum();
+
+            return (sum % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
