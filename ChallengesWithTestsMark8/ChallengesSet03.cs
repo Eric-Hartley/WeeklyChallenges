@@ -91,7 +91,16 @@ namespace ChallengesWithTestsMark8
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            List<int> oddNums = new List<int>();
+            for(int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    oddNums.Add(i);
+                }
+                
+            }
+            return oddNums.ToArray();   
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
