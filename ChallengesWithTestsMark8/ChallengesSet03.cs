@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -7,12 +8,29 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < vals.Length; i++)
+            {
+                if (vals[i] == false)
+                {
+                    return true;
+
+                }
+                
+            }
+            return false;
+
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return false;
+            }
+
+            var sum = numbers.Sum();
+
+            return (sum % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
