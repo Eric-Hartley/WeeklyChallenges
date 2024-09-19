@@ -21,7 +21,27 @@ namespace ChallengesWithTestsMark8
             bool containsLower = false;
             bool containsNumber = false;
 
-            throw new NotImplementedException();
+            for (int i = 0; i < password.Length; i++)
+            {
+                if (char.IsUpper(password[i]) == true)
+                {
+                    containsUpper = true;
+                }
+                if (char.IsLower(password[i]) == true)
+                {
+                    containsLower = true;
+                }
+                if (char.IsNumber(password[i]) == true)
+                {
+                    containsNumber = true;
+                }
+
+                if (containsLower == true && containsUpper == true && containsNumber == true)
+                {
+                    return true;
+                }
+            }
+            return false;
 
         }
 
@@ -58,7 +78,10 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
         }
     }
 }
